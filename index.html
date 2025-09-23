@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy's Website</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #1A202C;
+        }
+
+        .glass-card {
+            backdrop-filter: blur(10px) saturate(180%);
+            -webkit-backdrop-filter: blur(10px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2),
+                0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .glass-button {
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            color: #1A202C;
+        }
+
+        .glass-button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive font sizes */
+        .title-text {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .title-text {
+                font-size: 4rem;
+            }
+        }
+
+        /* Custom scrollbar styling */
+        body {
+            scrollbar-width: thin;
+            /* For Firefox */
+            scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+            /* For Firefox */
+        }
+
+        /* Hide default scrollbar for WebKit browsers */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+            margin: 10px 0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Ensure content is scrollable */
+        .custom-scrollbar {
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900">
+    <div class="custom-scrollbar container mx-auto p-6 md:p-12 lg:p-24 flex flex-col items-center justify-center">
+        <header class="w-full text-center max-w-lg lg:max-w-4xl">
+            <div class="glass-card p-6 md:p-12 lg:p-16 mb-12">
+                <h1
+                    class="title-text font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-cyan-700 to-sky-800 mb-2">
+                    Jeremy
+                </h1>
+                <p class="text-base md:text-lg lg:text-xl text-gray-800">
+                    你好！我是 Jeremy:D。
+                </p>
+            </div>
+        </header>
+        <main class="w-full text-center max-w-lg lg:max-w-4xl">
+            <section class="mt-12 md:mt-16 lg:mt-20">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">我的專長</h2>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
+                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                        </svg>
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-900">
+                            PyTorch神經網路訓練
+                        </h3>
+                        <p class="text-sm text-gray-700">利用 PyTorch 框架，設計並訓練高效能的神經網路模型。</p>
+                    </div>
+                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
+                        <svg class="w-12 h-12 text-pink-600 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.001c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM12 20.001c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2-12h4v6h-4zm0 8h4v2h-4z" />
+                        </svg>
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-900">Python</h3>
+                        <p class="text-sm text-gray-700">熟練運用 Python 進行自動化、數據分析與後端開發。</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="w-full text-center max-w-lg lg:max-w-4xl mt-12 md:mt-16 lg:mt-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">聯絡我</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="mailto:xinghong.su0818@gmail.com"
+                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold text-gray-900 transition-all duration-300 hover:scale-105">
+                    <span class="inline-block mr-2">📧</span> 電子郵件
+                </a>
+                <a href="https://www.instagram.com/jere.my0818" target="_blank"
+                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold text-gray-900 transition-all duration-300 hover:scale-105">
+                    <span class="inline-block mr-2">📸</span> Instagram
+                </a>
+            </div>
+            <p class="text-sm md:text-base text-gray-600 mt-12">
+                由 Jeremy Su 設計
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
