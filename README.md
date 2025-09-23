@@ -1,9 +1,7 @@
 # jeremysu0818.github.io
 
 <p align="center">
-  <img src="https://img.shields.io/badge/🌐_Website-Lightlab.dpdns.org-6A5ACD?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=1E90FF&color=9370DB" alt="Website Badge" />
-</p>
-
-<p align="center">
-  ✨ <a href="https://www.lightlab.dpdns.org"><b>點我進入網站</b></a> ✨
+  <a href="https://www.lightlab.dpdns.org">
+    <img src="https://raw.githubusercontent.com/JeremySu0818/jeremysu0818.github.io/main/static/banner.png" alt="Liquid Glass Banner" />
+  </a>
 </p>
