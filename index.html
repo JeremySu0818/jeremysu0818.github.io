@@ -23,81 +23,72 @@
             color: #1A202C;
         }
 
+        .overlay {
+            background: rgba(0, 0, 0, 0.45);
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+        }
+
         .glass-card {
-            backdrop-filter: blur(10px) saturate(180%);
-            -webkit-backdrop-filter: blur(10px) saturate(180%);
-            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.12);
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-                0 1px 3px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .glass-card:hover {
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2),
-                0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
         }
 
         .glass-button {
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.15);
             border-radius: 9999px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             transition: background-color 0.3s ease, transform 0.2s ease;
-            color: #1A202C;
+            color: #fff;
         }
 
         .glass-button:hover {
-            background-color: rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.35);
             transform: translateY(-2px);
         }
 
-        /* Responsive font sizes */
         .title-text {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
         }
 
         @media (min-width: 768px) {
             .title-text {
-                font-size: 4rem;
+                font-size: 4.5rem;
             }
         }
 
-        /* Custom scrollbar styling */
         body {
             scrollbar-width: thin;
-            /* For Firefox */
             scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-            /* For Firefox */
         }
 
-        /* Hide default scrollbar for WebKit browsers */
         ::-webkit-scrollbar {
             width: 10px;
         }
 
-        ::-webkit-scrollbar-track {
-            background: transparent;
-            margin: 10px 0;
-        }
-
         ::-webkit-scrollbar-thumb {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.3);
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            transition: background-color 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-color: rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.5);
         }
 
-        /* Ensure content is scrollable */
         .custom-scrollbar {
             min-height: 100vh;
             overflow-y: auto;
@@ -105,58 +96,89 @@
     </style>
 </head>
 
-<body class="bg-gray-900">
+<body class="bg-gray-900 text-white">
+    <div class="overlay"></div>
     <div class="custom-scrollbar container mx-auto p-6 md:p-12 lg:p-24 flex flex-col items-center justify-center">
         <header class="w-full text-center max-w-lg lg:max-w-4xl">
             <div class="glass-card p-6 md:p-12 lg:p-16 mb-12">
                 <h1
-                    class="title-text font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-cyan-700 to-sky-800 mb-2">
-                    Jeremy
+                    class="title-text font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mb-4">
+                    Jeremy Su
                 </h1>
-                <p class="text-base md:text-lg lg:text-xl text-gray-800">
-                    你好！我是 Jeremy:D。
-                </p>
+                <p class="text-base md:text-lg lg:text-xl text-gray-200">
+                    AI × Coding × Design<br>你好！我是 Jeremy (｡>﹏<｡) ✧ </p>
             </div>
         </header>
+
         <main class="w-full text-center max-w-lg lg:max-w-4xl">
+            <!-- 專長區塊 -->
             <section class="mt-12 md:mt-16 lg:mt-20">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">我的專長</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">我的專長</h2>
                 <div class="flex flex-wrap justify-center gap-6">
                     <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
-                        <svg class="w-12 h-12 text-blue-600 mb-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                        <svg class="w-12 h-12 text-cyan-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 4h16v16H4z" />
                         </svg>
-                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-900">
-                            PyTorch神經網路訓練
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">
+                            寫程式
                         </h3>
-                        <p class="text-sm text-gray-700">利用 PyTorch 框架，設計並訓練高效能的神經網路模型。</p>
+                        <p class="text-sm text-gray-300">使用 Python、C++、JavaScript 等語言，打造各種實用與創意專案。</p>
                     </div>
                     <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
-                        <svg class="w-12 h-12 text-pink-600 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-12 h-12 text-pink-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
                             <path
-                                d="M12 2.001c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zM12 20.001c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2-12h4v6h-4zm0 8h4v2h-4z" />
+                                d="M12 2C7 2 2 5 2 12s5 10 10 10 10-3 10-10S17 2 12 2zm0 4a2 2 0 0 1 2 2v8a2 2 0 0 1-4 0V8a2 2 0 0 1 2-2z" />
                         </svg>
-                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-gray-900">Python</h3>
-                        <p class="text-sm text-gray-700">熟練運用 Python 進行自動化、數據分析與後端開發。</p>
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">彈鋼琴</h3>
+                        <p class="text-sm text-gray-300">從古典到現代流行，用音樂傳達情感與故事。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 音樂專區 -->
+            <section class="mt-16 md:mt-20 lg:mt-24">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">我愛的音樂</h2>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
+                        <img src="/static/images/yuika.jpg" alt="Yuika" class="w-20 h-20 rounded-full mb-4 shadow-lg">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">Yuika</h3>
+                        <p class="text-sm text-gray-300">清新療癒的創作歌手，旋律中帶著溫柔力量。</p>
+                    </div>
+                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
+                        <img src="/static/images/rokudenashi.jpg" alt="Rokudenashi"
+                            class="w-20 h-20 rounded-full mb-4 shadow-lg">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">Rokudenashi</h3>
+                        <p class="text-sm text-gray-300">獨特嗓音與抒情旋律，帶來夜晚的心情陪伴。</p>
+                    </div>
+                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
+                        <img src="/static/images/yorushika.jpg" alt="Yorushika"
+                            class="w-20 h-20 rounded-full mb-4 shadow-lg">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">Yorushika</h3>
+                        <p class="text-sm text-gray-300">融合詩意與搖滾，讓音樂充滿故事感。</p>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="w-full text-center max-w-lg lg:max-w-4xl mt-12 md:mt-16 lg:mt-20">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">聯絡我</h2>
+
+        <!-- footer -->
+        <footer class="w-full text-center max-w-lg lg:max-w-4xl mt-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">聯絡我</h2>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <a href="mailto:xinghong.su0818@gmail.com"
-                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold text-gray-900 transition-all duration-300 hover:scale-105">
-                    <span class="inline-block mr-2">📧</span> 電子郵件
+                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105">
+                    📧 電子郵件
                 </a>
                 <a href="https://www.instagram.com/jere.my0818" target="_blank"
-                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold text-gray-900 transition-all duration-300 hover:scale-105">
-                    <span class="inline-block mr-2">📸</span> Instagram
+                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105">
+                    📸 Instagram
+                </a>
+                <a href="https://github.com/JeremySu0818" target="_blank"
+                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105">
+                    🌐 我的作品集
                 </a>
             </div>
-            <p class="text-sm md:text-base text-gray-600 mt-12">
-                由 Jeremy Su 設計
+            <p class="text-sm md:text-base text-gray-400 mt-12">
+                由 Jeremy Su 設計 ✧ Liquid Glass 風格
             </p>
         </footer>
     </div>
