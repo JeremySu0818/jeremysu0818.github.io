@@ -21,6 +21,8 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #1A202C;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
         }
 
         .overlay {
@@ -70,11 +72,6 @@
             }
         }
 
-        body {
-            scrollbar-width: thin;
-            scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-        }
-
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -92,74 +89,82 @@
         .custom-scrollbar {
             min-height: 100vh;
             overflow-y: auto;
+            overflow-x: hidden;
         }
     </style>
 </head>
 
 <body class="bg-gray-900 text-white">
     <div class="overlay"></div>
-    <div class="custom-scrollbar container mx-auto p-6 md:p-12 lg:p-24 flex flex-col items-center justify-center">
-        <header class="w-full text-center max-w-lg lg:max-w-4xl">
-            <div class="glass-card p-6 md:p-12 lg:p-16 mb-12">
+    <div class="custom-scrollbar w-full flex flex-col items-center justify-start px-6 py-12 md:py-20 lg:py-24">
+
+        <header class="w-full text-center max-w-4xl mx-auto mb-16">
+            <div class="glass-card p-8 md:p-12 lg:p-16 w-full">
                 <h1 class="title-text font-bold text-white mb-4">
                     Jeremy
                 </h1>
-                <p class="text-base md:text-lg lg:text-xl text-gray-200">
+                <p class="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed">
                     Train AI × Coding × Music<br>你好！我是 Xing-Hong，
-                    目前為九年級的數理資優生，對AI研究有濃厚的興趣😃</p>
+                    目前為九年級的數理資優生，對AI研究有濃厚的興趣
+                </p>
             </div>
         </header>
 
-        <main class="w-full text-center max-w-lg lg:max-w-4xl">
-            <section class="mt-12 md:mt-16 lg:mt-20">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">我的專長</h2>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
-                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">
+        <main class="w-full max-w-5xl mx-auto">
+            <section class="mb-16 md:mb-24">
+                <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-12">我的專長</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div class="glass-card p-6 flex flex-col items-center text-center h-full">
+                        <h3 class="text-lg md:text-xl font-semibold mb-3 text-white">
                             訓練AI
                         </h3>
-                        <p class="text-sm text-gray-300">使用Python的PyTorch訓練深度學習模型，並且製作出具有特色的延伸應用專案:D</p>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            使用Python的PyTorch訓練深度學習模型，並且製作出具有特色的延伸應用專案
+                        </p>
                     </div>
-                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
-                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">
+                    <div class="glass-card p-6 flex flex-col items-center text-center h-full">
+                        <h3 class="text-lg md:text-xl font-semibold mb-3 text-white">
                             寫程式
                         </h3>
-                        <p class="text-sm text-gray-300">
+                        <p class="text-sm text-gray-300 leading-relaxed">
                             從國小開始接觸並學習程式語言，精通Python與JavaScript程式語言，製作有趣的小應用以及網站，目前正在學習進階C語言以及C++
                         </p>
                     </div>
-                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
-                        <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">
+                    <div class="glass-card p-6 flex flex-col items-center text-center h-full">
+                        <h3 class="text-lg md:text-xl font-semibold mb-3 text-white">
                             音樂
                         </h3>
-                        <p class="text-sm text-gray-300">會彈鋼琴以及拉小提琴，小提琴有英國皇家證書:)
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            會彈鋼琴以及拉小提琴，小提琴有英國皇家證書
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section class="mt-16 md:mt-20 lg:mt-24">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">我愛的音樂(J-Pop)</h2>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
-                        <img src="/static/images/yuika.jpg" alt="Yuika" class="w-20 h-20 rounded-full mb-4 shadow-lg">
+            <section class="mb-16 md:mb-24">
+                <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-12">我愛的音樂(J-Pop)</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    <div class="glass-card p-6 flex flex-col items-center text-center h-full">
+                        <img src="/static/images/yuika.jpg" alt="Yuika"
+                            class="w-24 h-24 md:w-20 md:h-20 rounded-full mb-4 shadow-lg object-cover">
                         <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">Yuika</h3>
                         <p class="text-sm text-gray-300">清新療癒的創作歌手，旋律中帶著溫柔力量。</p>
                     </div>
-                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
+                    <div class="glass-card p-6 flex flex-col items-center text-center h-full">
                         <img src="/static/images/rokudenashi.jpg" alt="Rokudenashi"
-                            class="w-20 h-20 rounded-full mb-4 shadow-lg">
+                            class="w-24 h-24 md:w-20 md:h-20 rounded-full mb-4 shadow-lg object-cover">
                         <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">Rokudenashi</h3>
                         <p class="text-sm text-gray-300">獨特嗓音與抒情旋律，帶來夜晚的心情陪伴。</p>
                     </div>
-                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
+                    <div class="glass-card p-6 flex flex-col items-center text-center h-full">
                         <img src="/static/images/yorushika.jpg" alt="Yorushika"
-                            class="w-20 h-20 rounded-full mb-4 shadow-lg">
+                            class="w-24 h-24 md:w-20 md:h-20 rounded-full mb-4 shadow-lg object-cover">
                         <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">Yorushika</h3>
                         <p class="text-sm text-gray-300">融合詩意與搖滾，讓音樂充滿故事感。</p>
                     </div>
-                    <div class="glass-card p-6 flex-grow flex-col items-center text-center max-w-xs">
-                        <img src="/static/images/tuki.jpg" alt="Tuki" class="w-20 h-20 rounded-full mb-4 shadow-lg">
+                    <div class="glass-card p-6 flex flex-col items-center text-center h-full">
+                        <img src="/static/images/tuki.jpg" alt="Tuki"
+                            class="w-24 h-24 md:w-20 md:h-20 rounded-full mb-4 shadow-lg object-cover">
                         <h3 class="text-lg md:text-xl font-semibold mb-2 text-white">tuki.</h3>
                         <p class="text-sm text-gray-300">擁有超越年齡的強大創作力，嗓音極具穿透力與情感深度。</p>
                     </div>
@@ -167,15 +172,15 @@
             </section>
         </main>
 
-        <footer class="w-full text-center max-w-lg lg:max-w-4xl mt-16">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">聯絡我</h2>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <footer class="w-full text-center mt-auto pt-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8">聯絡我</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6">
                 <a href="mailto:xinghong.su0818@gmail.com"
-                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105">電子郵件</a>
+                    class="glass-button w-full sm:w-auto px-8 py-3 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105">電子郵件</a>
                 <a href="https://github.com/JeremySu0818" target="_blank"
-                    class="glass-button px-6 py-3 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105">我的GitHub作品集</a>
+                    class="glass-button w-full sm:w-auto px-8 py-3 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105">我的GitHub作品集</a>
             </div>
-            <p class="text-sm md:text-base text-gray-400 mt-12">
+            <p class="text-sm md:text-base text-gray-400 mt-12 md:mt-16">
                 由 Xing-Hong 設計
             </p>
         </footer>
